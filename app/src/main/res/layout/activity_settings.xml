@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settingRelativeLayout"
+    android:background="@drawable/frasierart"
+    tools:context=".Settings">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="60sp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-black"
+        android:paddingVertical="50dp"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Main Activity Background Image"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:layout_above="@+id/settingsToggleButton"
+        >
+    </TextView>
+
+    <ToggleButton
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/settingsToggleButton"
+        >
+    </ToggleButton>
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:text="Done"
+        android:onClick="onfinishedClick"
+        >
+    </Button>
+
+</RelativeLayout>
