@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:id="@+id/skylineImage"
+            android:src="@drawable/frasierskyline"
+            android:contentDescription="backgroundImage"
+            >
+
+        </ImageView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:id="@+id/apartmentImage"
+            android:src="@drawable/frasiersapartment"
+            android:contentDescription="backgroundImage"
+            android:visibility="invisible"
+            >
+
+        </ImageView>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:name="com.zybooks.manyfacesoffrasier.MartinFragment"
+            app:layout_constraintTop_toTopOf="@+id/gridLayoutFrasier"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_textview"
+        android:text="Frasier"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center|top"
+        android:paddingTop="100dp"
+        android:visibility="invisible"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_textview2"
+        android:text="Niles"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:layout_gravity="center|top"
+        android:paddingTop="100dp"
+        android:visibility="invisible"/>
+
+
+
+        <android.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:layout_gravity="center"
+            android:id="@+id/gridLayoutFrasier"
+            android:visibility="invisible"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:text="Sick"
+                android:textSize="40sp"
+                android:textColor="@color/white">
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/frasierSickImage"
+                android:src="@drawable/frasiersick"
+                android:layout_gravity="center">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:text="Happy"
+                android:textSize="40sp"
+                android:textColor="@color/white">
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/frasierhappy"
+                android:layout_gravity="center">
+            </ImageView>
+
+
+        </android.widget.GridLayout>
+
+        <android.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            android:layout_gravity="center"
+            android:id="@+id/gridLayoutNiles"
+            android:visibility="invisible"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:text="Sick"
+                android:textSize="40sp"
+                android:textColor="@color/white">
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:id="@+id/nilesSickImage"
+                android:src="@drawable/nilessick"
+                android:focusable="true"
+                android:layout_gravity="center">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:text="Happy"
+                android:textSize="40sp"
+                android:textColor="@color/white">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/nileshappy"
+                android:layout_gravity="center">
+            </ImageView>
+
+
+
+        </android.widget.GridLayout>
+
+
+        <ImageView
+            android:id="@+id/frasier_animation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom"
+            android:background = "@drawable/animation_list"
+            />
+
+        <ImageView
+            android:id="@+id/frasier_head"
+            android:layout_width="93dp"
+            android:layout_height="139dp"
+            android:layout_gravity="bottom|center"
+            android:onClick="frasierHeadAnimation"
+            app:srcCompat="@drawable/frasierhead" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:layout_gravity="bottom|left"
+            android:padding="15dp"
+            android:id="@+id/settingsButton"
+            android:onClick="settingsButtonClick"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/sherry_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sherry"
+            android:onClick="sherryButtonClick"
+            android:layout_gravity="bottom|right"/>
+
+
+        <Button
+            android:id="@+id/sherry_soundpool_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sherry\nSoundPool"
+            android:onClick="sherrySPButtonClick"
+            android:layout_gravity="bottom|center"/>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/frasier_screaming"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/frasier_scream"
+        android:visibility="invisible"
+        ></ImageView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
